@@ -12,4 +12,18 @@ class MovieController extends Controller
     {
         return view('alice.movie.create');
     }
+    public function company()
+    {
+        return redirect('alice/movie/company');
+    }
+
+    public function services()
+    {
+        return view('alice/movie/services');
+    }
+
+    public function contact()
+    {
+        return redirect('alice/movie/contact');
+    }
 }

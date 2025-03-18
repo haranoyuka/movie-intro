@@ -20,6 +20,9 @@ Route::get('/', function () {
 use App\Http\Controllers\Alice\MovieController;
 Route::controller(MovieController::class)->group(function() {
     Route::get('alice/movie/create', 'add');
+    Route::get('alice/movie/create', 'company');
+    Route::get('alice/movie/create', 'services');
+    Route::get('alice/movie/create', 'contact');
 });
 Auth::routes();
 
