@@ -21,3 +21,6 @@ use App\Http\Controllers\Alice\MovieController;
 Route::controller(MovieController::class)->group(function() {
     Route::get('alice/movie/create', 'add');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
