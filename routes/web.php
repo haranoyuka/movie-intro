@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+use App\Http\Controllers\Alice\MovieController;
+Route::controller(MovieController::class)->group(function() {
+    Route::get('alice/movie/create', 'add');
+});
