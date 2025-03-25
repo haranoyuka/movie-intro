@@ -12,18 +12,9 @@ class MovieController extends Controller
     {
         return view('alice.movie.create');
     }
-    public function company()
+    public function create(Request $request)
     {
-        return redirect('alice/movie/company');
+        return redirect('alice/movie/create');
     }
-
-    public function services()
-    {
-        return view('alice/movie/services');
-    }
-
-    public function contact()
-    {
-        return redirect('alice/movie/contact');
-    }
+    
 }

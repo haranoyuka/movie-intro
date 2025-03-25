@@ -19,11 +19,12 @@ Route::get('/', function () {
 
 use App\Http\Controllers\Alice\MovieController;
 Route::controller(MovieController::class)->group(function() {
-    Route::get('alice/movie/create', 'add');
-    Route::get('alice/movie/create', 'company');
-    Route::get('alice/movie/create', 'services');
-    Route::get('alice/movie/create', 'contact');
+    Route::get('movie/create', 'add')->name('movie.add');
+    Route::post('movie/create', 'create')->name('movie.create');
+    
+    
 });
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

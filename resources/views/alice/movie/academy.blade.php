@@ -1,11 +1,16 @@
+{{-- layouts/movie.blade.phpを読み込む --}}
 @extends('layouts.movie')
-@section('title', 'ニュースの新規作成')
 
+
+{{-- movie.blade.phpの@yield('title')に'アカデミー賞受賞作品'を埋め込む --}}
+@section('title', 'アカデミー賞受賞作品')
+
+{{-- alice.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>私の映画紹介</h2>
+                <h2>アカデミー賞受賞作品</h2>
                 <form action="{{ route('movie.create') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)
@@ -34,7 +39,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">感想</label>
+                        <label class="col-md-2">コメント</label>
                         <div class="col-md-10">
                             <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
                         </div>
