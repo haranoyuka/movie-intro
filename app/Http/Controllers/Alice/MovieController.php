@@ -17,4 +17,13 @@ class MovieController extends Controller
         return redirect('alice/movie/create');
     }
     
+    public function academy()
+    {
+        return redirect('alice/movie/academy');
+    }
+
+    public function ranking()
+    {
+        return redirect('alice/movie/ranking');
+    }
 }

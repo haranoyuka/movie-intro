@@ -21,6 +21,8 @@ use App\Http\Controllers\Alice\MovieController;
 Route::controller(MovieController::class)->group(function() {
     Route::get('movie/create', 'add')->name('movie.add');
     Route::post('movie/create', 'create')->name('movie.create');
+    Route::get('movie/academy', 'academy')->name('movie.academy');
+    Route::get('movie/ranking', 'ranking')->name('movie.ranking');
     
     
 });
